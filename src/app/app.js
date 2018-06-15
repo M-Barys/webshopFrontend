@@ -30,7 +30,6 @@ class AppCtrl {
 }
 
 
-const MODULE_NAME = 'webstore';
 
 function configureInitialRouting($locationProvider, $urlServiceProvider, $stateRegistryProvider) {
     $locationProvider.html5Mode(false);
@@ -39,7 +38,7 @@ function configureInitialRouting($locationProvider, $urlServiceProvider, $stateR
 }
 
 
-function bindStateOnScope($rootScope, $state, $stateParams, $http, $transitions, appState) {
+function bindStateOnScope($rootScope, $state, $stateParams, $http, $transitions) {
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
     $http.defaults.withCredentials = true;
@@ -57,6 +56,7 @@ function bindVisualizer($uiRouter, $trace) {
     $trace.enable('TRANSITION');
 }
 
+const MODULE_NAME = 'webstore';
 
 angular.module(MODULE_NAME, [
     ngResource,
