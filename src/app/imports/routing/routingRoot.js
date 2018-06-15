@@ -1,17 +1,20 @@
 import rootTemplate from './views/rootTemplate.html';
-import loadingTemplate from './views/loadingTemplate.html';
+import rootMenuPartial from './views/partials/rootMenu.html';
+import workAreaTemplate from './views/workAreaTemplate.html';
+
 
 //Information section
 import menuInfoSections from './views/partials/menuInfoSections.html';
 
-import welcome from './views/info/welcome.html';
-import services from './views/info/services.html';
-import about from './views/info/about.html';
-import references from './views/info/references.html';
-import contact from './views/info/contact.html';
+import welcomeView from './views/info/welcome.html';
+import servicesView from './views/info/services.html';
+import aboutView from './views/info/about.html';
+import referencesView from './views/info/references.html';
+import contactView from './views/info/contact.html';
+import infoContent from './views/infoContent.html';
 
 import singleCategoryView from './views/categories/singleCategoryView.html';
-import productInCategory from './views/categories/productInCategory.html';
+import productInCategoryView from './views/categories/productInCategory.html';
 import productView from './views/categories/productView.html';
 
 
@@ -23,12 +26,6 @@ let appListOfStates = [{
     template: rootTemplate,
     abstract: true,
     url: "/"
-}, {
-    name: 'loading',
-    template: loadingTemplate,
-    url: "loading",
-    controllerAs: 'loadCtrl',
-    controller: 'LoadingController'
 },  {
       name: 'root.info',
       url: "info",
@@ -37,7 +34,7 @@ let appListOfStates = [{
               template: menuInfoSections
           },
           rootUIView: {
-              template: InfoContent
+              template: infoContent
           }
       }
 }, {
@@ -90,7 +87,8 @@ let appListOfStates = [{
                         controllerAs: 'contactCtrl'
                     }
                 }
-},let settingsStates = [{
+}];
+let categoriesStates = [{
       name: 'root.categories',
       abstract: true,
       url: "category/",
@@ -103,19 +101,19 @@ let appListOfStates = [{
           }
       }
 },  {
-                name: 'root.categories.SingleCategoryView',
+                name: 'root.categories.singleCategoryView',
                 abstract: true,
-                url: “{categoryId}”,
+                url: "{categoryId}",
                 views: {
                     contentUI: {
-                        template: SingleCategoryView,
+                        template: singleCategoryView,
                         controller: 'SingleCategoryViewCtrl',
                         controllerAs: 'SingleCategoryViewCtrl'
                     }
                 }
 }, {
                 name: 'root.categories.SingleCategoryView.productInCategory',
-                url: “/product/{productID}”,
+                url: "/product/{productID}",
                 views: {
                     contentUI: {
                         template: productInCategoryView,
@@ -123,10 +121,11 @@ let appListOfStates = [{
                         controllerAs: 'productInCategoryCtrl'
                     }
                 }
-},let settingsStates = [{
+}];
+let productStates = [{
       name: 'root.productView',
       abstract: true,
-      url: “product/{productID}”,
+      url: "product/{productID}",
       views: {
           rootHeader: {
               template: rootMenuPartial
@@ -137,6 +136,10 @@ let appListOfStates = [{
       }
 }
 ];
+
+let allRoutes = [].concat(categoriesStates)
+    .concat(appListOfStates)
+    .concat(productStates);
 
 
   export default allRoutes;
