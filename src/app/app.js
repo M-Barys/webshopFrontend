@@ -18,7 +18,8 @@ import APIService from "./imports/service/APIService";
 import APIDataAccessLayer from "./imports/service/backend/APIDataAccessLayer"
 
 
-import InfoAboutCtrl from "./imports/controller/InfoAboutController"
+import InfoAboutCtrl from "./imports/controller/InfoAboutController";
+import SingleCategoryViewCtrl from "./imports/controller/SingleCategoryViewController";
 
 
 
@@ -74,6 +75,7 @@ angular.module(MODULE_NAME, [
     .directive('app', app)
     .controller('AppCtrl', AppCtrl)
     .controller('InfoAboutCtrl', InfoAboutCtrl)
+    .controller('SingleCategoryViewCtrl', SingleCategoryViewCtrl)
     .config(configureInitialRouting)
     .service('apiService', APIService)
     .service('backend', APIDataAccessLayer)
