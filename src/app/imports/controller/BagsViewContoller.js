@@ -1,8 +1,8 @@
-class AboutCtrl {
+class BagsViewCtrl {
     constructor(apiService, $http) {
         $http({
             method: 'GET',
-            url: 'http://localhost:8080/api/info/about'
+            url: 'http://localhost:8080/api/categories/SingleCategoryView/BagsView'
         }).then((response) => {
             console.log("Response (odpowiedz):")
             console.log(response)
@@ -13,4 +13,4 @@ class AboutCtrl {
 
 }
 
-export default AboutCtrl;
+export default BagsViewCtrl;

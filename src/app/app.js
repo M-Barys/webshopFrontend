@@ -14,6 +14,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import appListOfStates from "./imports/routing/routingRoot";
 import holderJSDir from "./imports/directives/holderDirective";
 import loremJSDir from "./imports/directives/lorem.js";
+import APIService from "./imports/service/APIService";
+import APIDataAccessLayer from "./imports/service/backend/APIDataAccessLayer"
+
+
+import InfoAboutCtrl from "./imports/controller/InfoAboutController"
+
+
 
 let app = () => {
     return {
@@ -33,7 +40,7 @@ class AppCtrl {
 
 function configureInitialRouting($locationProvider, $urlServiceProvider, $stateRegistryProvider) {
     $locationProvider.html5Mode(false);
-    $urlServiceProvider.rules.otherwise('/welcome');
+    $urlServiceProvider.rules.otherwise('/info');
     appListOfStates.forEach(s => $stateRegistryProvider.register(s));
 }
 
@@ -66,8 +73,13 @@ angular.module(MODULE_NAME, [
 ])
     .directive('app', app)
     .controller('AppCtrl', AppCtrl)
+    .controller('InfoAboutCtrl', InfoAboutCtrl)
     .config(configureInitialRouting)
+    .service('apiService', APIService)
+    .service('backend', APIDataAccessLayer)
     .run(bindStateOnScope)
     .run(bindVisualizer);
+
+
 
 export default MODULE_NAME;

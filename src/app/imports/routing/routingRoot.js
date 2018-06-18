@@ -16,6 +16,7 @@ import infoContent from './views/infoContent.html';
 import singleCategoryView from './views/categories/singleCategoryView.html';
 import productInCategoryView from './views/categories/productInCategory.html';
 import productView from './views/categories/productView.html';
+import bagsView from './views/categories/bagsView.html';
 
 
 
@@ -53,7 +54,7 @@ let appListOfStates = [{
           views: {
               contentUI: {
                   template: aboutView,
-                  controller: 'AboutCtrl',
+                  controller: 'InfoAboutCtrl',
                   controllerAs: 'aboutCtrl'
               }
           }
@@ -112,7 +113,7 @@ let categoriesStates = [{
                     }
                 }
 }, {
-                name: 'root.categories.SingleCategoryView.productInCategory',
+                name: 'root.categories.singleCategoryView.productInCategory',
                 url: "/product/{productID}",
                 views: {
                     contentUI: {
@@ -121,7 +122,19 @@ let categoriesStates = [{
                         controllerAs: 'productInCategoryCtrl'
                     }
                 }
-}];
+}, {
+          name: 'root.categories.singleCategoryView.bagsView',
+          url: "/bagsView/{categoryId}",
+          views: {
+              contentUI: {
+                  template: bagsView,
+                  controller: 'BagsViewCtrl',
+                  controllerAs: 'bagsViewCtrl'
+              }
+          }
+  }
+
+];
 let productStates = [{
       name: 'root.productView',
       abstract: true,

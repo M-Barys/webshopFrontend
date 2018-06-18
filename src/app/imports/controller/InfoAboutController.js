@@ -1,8 +1,8 @@
-class ServicesCtrl {
+class InfoAboutCtrl {
     constructor(apiService, $http) {
         $http({
             method: 'GET',
-            url: 'http://localhost:8080/api/info/services'
+            url: 'http://localhost:8080/api/info/about'
         }).then((response) => {
             console.log("Response (odpowiedz):")
             console.log(response)
@@ -12,8 +12,5 @@ class ServicesCtrl {
     }
 
 }
-function myFunction() {
-    alert("The form was submitted");
-}
 
-export default ServicesCtrl;
+export default InfoAboutCtrl;

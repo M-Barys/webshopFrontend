@@ -14,3 +14,13 @@ class ContactCtrl {
 }
 
 export default ContactCtrl;
+
+//module('submitContactCtrl', [])
+//    .controller('ContactController', ['$scope', function($scope) {
+//      $scope.text = 'hello';
+//      $scope.submit = function() {
+//        if ($scope.text) {
+//
+//        }
+//      };
+//    }]);

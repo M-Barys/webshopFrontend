@@ -1,0 +1,49 @@
+<div class="row">
+    <h2>NHYSolution</h2>
+    <div class="col-12">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link disabled" ui-sref="root.info.welcome" ui-sref-active="active">Strona glowna</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="root.info.about" ui-sref-active="active">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="root.info.services" ui-sref-active="active">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="root.info.references" ui-sref-active="active">References</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="root.info.contact" ui-sref-active="active">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" ui-sref="root.info.categories" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" ui-sref="root.categories.singleCategoryView.bagsView({categoryId: 'bagsView'})">Bags</a>
+                    <a class="dropdown-item" href="#">Scarves, foulards and hats</a>
+                    <a class="dropdown-item" href="#">Small accessories</a>
+                    <a class="dropdown-item" href="#">Jemelry</a>
+                    <a class="dropdown-item" href="#">Belts</a>
+                    <a class="dropdown-item" href="#">Eyewerman</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" ui-sref="root.info.productView" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Product
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Bags</a>
+                    <a class="dropdown-item" href="#">Scarves, foulards and hats</a>
+                    <a class="dropdown-item" href="#">Small accessories</a>
+                    <a class="dropdown-item" href="#">Jemelry</a>
+                    <a class="dropdown-item" href="#">Belts</a>
+                    <a class="dropdown-item" href="#">Eyewerman</a>
+                </div>
+            </li>
+        </ul>
+        <div ui-view="contentUI"></div>
+    </div>
+</div>
