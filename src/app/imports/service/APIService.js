@@ -8,6 +8,34 @@ class APIService {
         return this.backend.loginUser(loginForm);
     }
 
+    getUserProductView(){
+        return this.backend.getUserProductView();
+    }
+
+    getUserContact(){
+         return this.backend.getUserContact();
+    }
+
+     getUserAbout(){
+         return this.backend.getUserAbout();
+     }
+
+     getUserProductInCategory(){
+         return this.backend.getUserProductInCategory();
+     }
+
+     getUserReferences(){
+         return this.backend.getUserReferences();
+     }
+
+     getUserServices(){
+         return this.backend.getUserServices();
+     }
+
+     getUserSingleCategoryView(){
+             return this.backend.getUserSingleCategoryView();
+         }
+
     isUserLoggedIn() {
         return this.backend.callLogin()
             .then(result => {

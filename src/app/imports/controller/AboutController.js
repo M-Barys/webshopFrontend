@@ -1,4 +1,4 @@
-class ContactCtrl {
+class InfoAboutCtrl {
     constructor(apiService, $http) {
 
         this.apiService = apiService;
@@ -6,4 +6,4 @@ class ContactCtrl {
 
 }
 
-export default ContactCtrl;
+export default InfoAboutCtrl;

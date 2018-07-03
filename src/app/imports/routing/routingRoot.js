@@ -49,13 +49,13 @@ let appListOfStates = [{
     views: {
         contentUI: {
             template: aboutView,
-            controller: 'InfoAboutCtrl',
+            controller: 'AboutCtrl',
             controllerAs: 'aboutCtrl'
         }
     }
 }, {
     name: 'root.info.services',
-    url: "/service",
+    url: "/services",
     views: {
         contentUI: {
             template: servicesView,
@@ -112,8 +112,8 @@ let categoriesStates = [{
     views: {
         contentUI: {
             template: productInCategoryView,
-            controller: 'productInCategoryCtrl',
-            controllerAs: 'productInCategoryCtrl'
+            controller: 'ProductInCategoryCtrl',
+            controllerAs: 'productCtrl'
         }
     }
 }];

@@ -16,10 +16,19 @@ import holderJSDir from "./imports/directives/holderDirective";
 import loremJSDir from "./imports/directives/lorem.js";
 import APIService from "./imports/service/APIService";
 import APIDataAccessLayer from "./imports/service/backend/APIDataAccessLayer"
+import ContactCtrl from "./imports/controller/ContactController";
 
-
-import InfoAboutCtrl from "./imports/controller/InfoAboutController";
+import AboutCtrl from "./imports/controller/AboutController";
 import SingleCategoryViewCtrl from "./imports/controller/SingleCategoryViewController";
+import WelcomeCtrl from "./imports/controller/WelcomeController";
+import ProductViewCtrl from "./imports/controller/ProductViewController";
+import ServicesCtrl from "./imports/controller/ServicesController";
+import ReferencesCtrl from "./imports/controller/ReferencesController";
+import ProductInCategoryCtrl from "./imports/controller/ProductInCategoryController";
+
+
+
+
 
 
 
@@ -74,7 +83,13 @@ angular.module(MODULE_NAME, [
 ])
     .directive('app', app)
     .controller('AppCtrl', AppCtrl)
-    .controller('InfoAboutCtrl', InfoAboutCtrl)
+    .controller('AboutCtrl', AboutCtrl)
+    .controller( 'ContactCtrl', ContactCtrl)
+    .controller( 'WelcomeCtrl', WelcomeCtrl)
+    .controller( 'ServicesCtrl', ServicesCtrl)
+    .controller( 'ReferencesCtrl', ReferencesCtrl)
+    .controller('ProductViewCtrl', ProductViewCtrl)
+    .controller('ProductInCategoryCtrl', ProductInCategoryCtrl)
     .controller('SingleCategoryViewCtrl', SingleCategoryViewCtrl)
     .config(configureInitialRouting)
     .service('apiService', APIService)
