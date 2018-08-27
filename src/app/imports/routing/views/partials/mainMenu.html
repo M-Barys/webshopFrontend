@@ -1,4 +1,160 @@
- <ul class="nav justify-content-center">
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Bootstrap 4 Theme Kit</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Custom built theme - This already includes Bootstrap 4 -->
+    <link rel="stylesheet" href="css/mytheme.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height:250px">
+    <span class="navbar-text bg-dark">
+      <h2>Dashboard </h2>
+        <h5>Statistics</h5>
+    </span>
+    <div class="container-fluid">
+        <button type="button" class="sidebar-open d-lg-none">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand d-none d-lg-inline-block" href="index.html">
+            <i class="ion ion-ios-pulse-strong" aria-hidden="true"></i>
+        </a>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><i class="ion ion-person"></i> View Profile</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="ion ion-chatbubbles"></i> Contacts</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="ion ion-email"></i> Mailbox</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="ion ion-gear-b"></i> Settings</a></li>
+                    <li role="separator" class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#"><i class="ion ion-log-out"></i> Sign out</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a  class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Messages</a>
+                <div class="dropdown-menu dropdown-md">
+                    <div class="media-items">
+                        <div class="media">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tasks</a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-md last-dropdown"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="col-sm-3 d-none d-md-inline-block page-search-wrapper">
+        <input type="text" class="form-control form-control-lg keyword-search" placeholder="Search for files &amp; reports..">
+    </div>
+</nav>
+<br>
+<div class="row">
+    <div class="col-md-3 order-md-2">
+        <nav class="nav flex-column">
+                <a class="nav-link disabled" ui-sref="root.info.welcome" ui-sref-active="active">Dashboard</a>
+                <a class="nav-link disabled" ui-sref="root.info.about" ui-sref-active="active">User interface</a>
+                <a class="nav-link disabled" ui-sref="root.info.services" ui-sref-active="active">Charts</a>
+                <a class="nav-link disabled" ui-sref="root.info.references" ui-sref-active="active">Customer Pages</a>
+                <a class="nav-link disabled" ui-sref="root.info.contact" ui-sref-active="active">Contact</a>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" ui-sref="root.info.categories" id="navbarDropdownMenuLink"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item"
+                       ui-sref="root.categories.singleCategoryView({categoryId: 'bagsView'})">Bags</a>
+                    <a class="dropdown-item"
+                       ui-sref="root.categories.singleCategoryView({categoryId: 'Scarves'})">Scarves, foulards and hats</a>
+                    <a class="dropdown-item"
+                       ui-sref="root.categories.singleCategoryView({categoryId: 'accessories'})">Small accessories</a>
+                    <a class="dropdown-item"
+                       ui-sref="root.categories.singleCategoryView({categoryId: 'Jemelry'})">Jemelry</a>
+                    <a class="dropdown-item"
+                       ui-sref="root.categories.singleCategoryView({categoryId: 'Belts'})">Belts</a>
+                    <a class="dropdown-item"
+                       ui-sref="root.categories.singleCategoryView({categoryId: 'Eyewerman'})">Eyewerman</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" ui-sref="root.info.productView" id="navbarDropdownMenuLink"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Product
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item"
+                       ui-sref="root.categories.singleCategoryView({categoryId: 'bagsView'})">Bags</a>
+                    <a class="dropdown-item"
+                       ui-sref="root.categories.singleCategoryView({categoryId: 'Scarves'})">Scarves, foulards and hats</a>
+                    <a class="dropdown-item"
+                       ui-sref="root.categories.singleCategoryView({categoryId: 'accessories'})">Small accessories</a>
+                    <a class="dropdown-item"
+                       ui-sref="root.categories.singleCategoryView({categoryId: 'Jemelry'})">Jemelry</a>
+                    <a class="dropdown-item"
+                       ui-sref="root.categories.singleCategoryView({categoryId: 'Belts'})">Belts</a>
+                    <a class="dropdown-item"
+                       ui-sref="root.categories.singleCategoryView({categoryId: 'Eyewerman'})">Eyewerman</a>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+    <div class="col-md-6 order-md-2 mb-2">
+        <div class="container">
+            <div class="row">
+                <div class="card border-light mb-3" style="max-width: 20rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Light card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <br>
+                <div class="card border-light mb-6" style="max-width: 30rem;">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Light card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-light mb-3" style="max-width: 40rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Light card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card border-light mb-3" style="max-width: 30rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Light card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<footer class="site-footer text-center">
+    <p>© 2018 EIIPII</p>
+    <ul class="list-inline">
+        <li class="list-inline-item">Home</li>
+        <li class="list-inline-item">Support</li>
+        <li class="list-inline-item">FAQ</li>
+        <li class="list-inline-item">Contact</li>
+    </ul>
+</footer>
+</body>
+</html>
+
+
+<ul class="nav justify-content-center">
         <li class="nav-item">
             <a class="nav-link disabled" ui-sref="root.info.welcome" ui-sref-active="active">Strona glowna</a>
         </li>
