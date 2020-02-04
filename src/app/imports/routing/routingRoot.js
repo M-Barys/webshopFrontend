@@ -4,6 +4,8 @@ import workAreaTemplate from './views/workAreaTemplate.html';
 
 //Information section
 import mainMenu from './views/partials/mainMenu.html';
+import header from './views/partials/header.html';
+import menu from './views/partials/menu.html';
 
 import welcomeView from './views/info/welcome.html';
 import servicesView from './views/info/services.html';
@@ -27,9 +29,12 @@ let appListOfStates = [{
     url: "info",
     views: {
         rootHeader: {
-            template: mainMenu
+            template: header
         },
-        rootUIView: {
+        sideBar:{
+            template: menu
+        },
+        content: {
             template: infoContent
         }
     }
@@ -47,7 +52,7 @@ let appListOfStates = [{
     name: 'root.info.about',
     url: "/about",
     views: {
-        contentUI: {
+        content: {
             template: aboutView,
             controller: 'AboutCtrl',
             controllerAs: 'aboutCtrl'
@@ -57,7 +62,7 @@ let appListOfStates = [{
     name: 'root.info.services',
     url: "/services",
     views: {
-        contentUI: {
+        content: {
             template: servicesView,
             controller: 'ServicesCtrl',
             controllerAs: 'servicesCtrl'
@@ -67,7 +72,7 @@ let appListOfStates = [{
     name: 'root.info.references',
     url: "/references",
     views: {
-        contentUI: {
+        content: {
             template: referencesView,
             controller: 'ReferencesCtrl',
             controllerAs: 'referencesCtrl'

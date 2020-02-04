@@ -26,12 +26,6 @@ import ServicesCtrl from "./imports/controller/ServicesController";
 import ReferencesCtrl from "./imports/controller/ReferencesController";
 import ProductInCategoryCtrl from "./imports/controller/ProductInCategoryController";
 
-
-
-
-
-
-
 let app = () => {
     return {
         template: require('./app.html'),
@@ -45,8 +39,6 @@ class AppCtrl {
         this.$state = $state;
     }
 }
-
-
 
 function configureInitialRouting($locationProvider, $urlServiceProvider, $stateRegistryProvider) {
     $locationProvider.html5Mode(false);
