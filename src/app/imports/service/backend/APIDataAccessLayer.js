@@ -18,6 +18,10 @@ class APIDataAccessLayer {
     getBackendVersion() {
         return this.$resource('/api/version/self').get().$promise;
     }
+
+    getCategories(){
+        return this.$resource('/api/categories').get();
+    }
 }
 
 export default APIDataAccessLayer;

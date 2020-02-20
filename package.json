@@ -1,5 +1,5 @@
 {
-  "name": "webstronefrontend",
+  "name": "webstorefrontend",
   "version": "1.0.0",
   "description": "tutorial for webstorefrontend",
   "main": "index.js",
@@ -25,12 +25,12 @@
   "dependencies": {
     "@uirouter/angularjs": "^1.0.16",
     "@uirouter/visualizer": "^6.0.0",
-    "angular": "^1.7.0",
+    "angular": "^1.7.9",
     "angular-resource": "^1.7.0",
-    "bootstrap": "^4.1.1",
+    "bootstrap": "^4.4.1",
     "fast-lorem-ipsum": "^1.2.0",
     "holderjs": "^2.9.4",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "popper.js": "^1.14.3"
   },
   "devDependencies": {
@@ -61,7 +61,7 @@
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.1",
     "style-loader": "^0.21.0",
-    "webpack": "^4.8.3",
+    "webpack": "^4.41.5",
     "webpack-cli": "^2.1.3",
     "webpack-serve": "^0.3.2"
   }

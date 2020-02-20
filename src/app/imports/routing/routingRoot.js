@@ -5,6 +5,7 @@ import workAreaTemplate from './views/workAreaTemplate.html';
 //Information section
 import mainMenu from './views/partials/mainMenu.html';
 import header from './views/partials/header.html';
+import footer from './views/partials/footer.html';
 import menu from './views/partials/menu.html';
 
 import welcomeView from './views/info/welcome.html';
@@ -12,7 +13,8 @@ import servicesView from './views/info/services.html';
 import aboutView from './views/info/about.html';
 import referencesView from './views/info/references.html';
 import contactView from './views/info/contact.html';
-import infoContent from './views/infoContent.html';
+import infoPage from './views/infoPage.html';
+import infoPageContent from './views/info/infoPageContent.html';
 
 import singleCategoryView from './views/categories/singleCategoryView.html';
 import productInCategoryView from './views/categories/productInCategory.html';
@@ -31,21 +33,26 @@ let appListOfStates = [{
         rootHeader: {
             template: header
         },
-        sideBar:{
-            template: menu
+        footer: {
+            template: footer
         },
-        content: {
-            template: infoContent
-        }
+        infoPage:{
+            template: infoPage,
+            controller: 'InfoCtrl',
+            controllerAs: 'infoCtrl'
+        },
     }
 }, {
     name: 'root.info.welcome',
     url: "/welcome",
     views: {
-        contentUI: {
+        content: {
             template: welcomeView,
             controller: 'WelcomeCtrl',
             controllerAs: 'welcomeCtrl'
+        },
+        sidebar:{
+            template: menu
         }
     }
 }, {

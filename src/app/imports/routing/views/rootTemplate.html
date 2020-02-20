@@ -7,88 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Custom built theme - This already includes Bootstrap 4 -->
-    <link rel="stylesheet" href="css/mytheme.min.css">
+    <!--<link rel="stylesheet" href="css/mytheme.min.css">-->
+    <link rel="stylesheet" href="src/style/app.css">
 </head>
 <body>
 
 
+<div class="container-fluid bg-dark" class="row" style="height:150px" ui-view="rootHeader"></div>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height:150px" ui-view="rootHeader" class="row"></nav>
-        <br>
-        <div class="row">
-            <div ui-view="sideBar" class="col-md-3 order-md-2"></div>
-            <div ui-view="content" class="col-md-6 order-md-2 mb-2"></div>
-        </div>
+<div ui-view="infoPage"></div>
 
-        <div class="row" ui-view="rootUIView"></div>
-        <div class="row" ui-view="rootFooter"></div>
-
-        <footer class="site-footer text-center">
-            <p>© 2020 Mateusz Barys</p>
-            <ul class="list-inline">
-                <li class="list-inline-item">Home</li>
-                <li class="list-inline-item">Support</li>
-                <li class="list-inline-item">FAQ</li>
-                <li class="list-inline-item">Contact</li>
-            </ul>
-        </footer>
-
-
-
-
+<div class="container-fluid bg-dark" class="row" ui-view="footer" style="color:white"></div>
 
 </body>
 </html>
 
 
-<ul class="nav justify-content-center">
-    <li class="nav-item">
-        <a class="nav-link disabled" ui-sref="root.info.welcome" ui-sref-active="active">Strona glowna</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" ui-sref="root.info.about" ui-sref-active="active">About</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" ui-sref="root.info.services" ui-sref-active="active">Services</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" ui-sref="root.info.references" ui-sref-active="active">References</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" ui-sref="root.info.contact" ui-sref-active="active">Contact</a>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" ui-sref="root.info.categories" id="navbarDropdownMenuLink"
-           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Categories
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'bagsView'})">Bags</a>
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'Scarves'})">Scarves, foulards and hats</a>
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'accessories'})">Small accessories</a>
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'Jemelry'})">Jemelry</a>
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'Belts'})">Belts</a>
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'Eyewerman'})">Eyewerman</a>
-        </div>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" ui-sref="root.info.productView" id="navbarDropdownMenuLink"
-           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Product
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Bags</a>
-            <a class="dropdown-item" href="#">Scarves, foulards and hats</a>
-            <a class="dropdown-item" href="#">Small accessories</a>
-            <a class="dropdown-item" href="#">Jemelry</a>
-            <a class="dropdown-item" href="#">Belts</a>
-            <a class="dropdown-item" href="#">Eyewerman</a>
-        </div>
-    </li>
-</ul>

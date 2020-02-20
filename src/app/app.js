@@ -17,8 +17,10 @@ import loremJSDir from "./imports/directives/lorem.js";
 import APIService from "./imports/service/APIService";
 import APIDataAccessLayer from "./imports/service/backend/APIDataAccessLayer"
 import ContactCtrl from "./imports/controller/ContactController";
+import InfoCtrl from "./imports/controller/InfoController";
 
 import AboutCtrl from "./imports/controller/AboutController";
+import CategoriesCtrl from "./imports/controller/CategoriesController";
 import SingleCategoryViewCtrl from "./imports/controller/SingleCategoryViewController";
 import WelcomeCtrl from "./imports/controller/WelcomeController";
 import ProductViewCtrl from "./imports/controller/ProductViewController";
@@ -75,11 +77,13 @@ angular.module(MODULE_NAME, [
 ])
     .directive('app', app)
     .controller('AppCtrl', AppCtrl)
+    .controller('InfoCtrl', InfoCtrl)
     .controller('AboutCtrl', AboutCtrl)
     .controller( 'ContactCtrl', ContactCtrl)
     .controller( 'WelcomeCtrl', WelcomeCtrl)
     .controller( 'ServicesCtrl', ServicesCtrl)
     .controller( 'ReferencesCtrl', ReferencesCtrl)
+    .controller( 'CategoriesCtrl', CategoriesCtrl)
     .controller('ProductViewCtrl', ProductViewCtrl)
     .controller('ProductInCategoryCtrl', ProductInCategoryCtrl)
     .controller('SingleCategoryViewCtrl', SingleCategoryViewCtrl)

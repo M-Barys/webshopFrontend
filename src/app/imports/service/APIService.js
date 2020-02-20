@@ -8,6 +8,9 @@ class APIService {
         return this.backend.loginUser(loginForm);
     }
 
+    getCategories(){
+        return this.backend.getCategories();
+    }
     getUserProductView(){
         return this.backend.getUserProductView();
     }
