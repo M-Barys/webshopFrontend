@@ -15,6 +15,7 @@ angular.module(dirModuleName, [])
                 element.html(output);
             }
         };
+        // console.log($location)
     }]);
 
 export default dirModuleName;

@@ -1,11 +1,12 @@
 class SidebarCtrl {
-    constructor(apiService, $http) {
+    constructor(apiService, $http, $scope) {
 
         this.apiService = apiService;
-        this.loadAllCategories();
+        this.$scope = $scope;
+        this.loadAllCategories($scope);
     }
 
-    loadAllCategories() {
+    loadAllCategories(scope) {
         let categories = [{
             id: 1,
             name: "frezarki"},
@@ -20,8 +21,9 @@ class SidebarCtrl {
                 name: "oprogramowanie"
             }];
 
-        
+        scope.categories = categories;
     }
+
 }
 
 export default SidebarCtrl;

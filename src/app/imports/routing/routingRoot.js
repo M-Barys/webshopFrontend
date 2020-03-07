@@ -14,7 +14,7 @@ import aboutView from './views/info/about.html';
 import referencesView from './views/info/references.html';
 import contactView from './views/info/contact.html';
 import infoPage from './views/infoPage.html';
-import infoPageContent from './views/info/infoPageContent.html';
+
 
 import singleCategoryView from './views/categories/singleCategoryView.html';
 import productInCategoryView from './views/categories/productInCategory.html';
@@ -52,7 +52,9 @@ let appListOfStates = [{
             controllerAs: 'welcomeCtrl'
         },
         sidebar:{
-            template: menu
+            template: menu,
+            controller: 'SidebarCtrl',
+            controllerAs: 'sidebarCtrl'
         }
     }
 }, {

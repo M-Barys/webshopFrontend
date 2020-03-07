@@ -1,47 +1,50 @@
-<nav class="nav flex-column">
-    <a class="nav-link disabled" ui-sref="root.info.welcome" ui-sref-active="active">Dashboard</a>
-    <a class="nav-link disabled" ui-sref="root.info.about" ui-sref-active="active">User interface</a>
-    <a class="nav-link disabled" ui-sref="root.info.services" ui-sref-active="active">Charts</a>
-    <a class="nav-link disabled" ui-sref="root.info.references" ui-sref-active="active">Customer Pages</a>
-    <a class="nav-link disabled" ui-sref="root.info.contact" ui-sref-active="active">Contact</a>
-    <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" ui-sref="root.info.categories" id="navbarDropdownMenuLink"
-           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Categories
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'bagsView'})">Bags</a>
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'Scarves'})">Scarves, foulards and hats</a>
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'accessories'})">Small accessories</a>
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'Jemelry'})">Jemelry</a>
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'Belts'})">Belts</a>
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'Eyewerman'})">Eyewerman</a>
-        </div>
-    </div>
-    <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" ui-sref="root.info.productView" id="navbarDropdownMenuLink"
-           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Product
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'bagsView'})">Bags</a>
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'Scarves'})">Scarves, foulards and hats</a>
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'accessories'})">Small accessories</a>
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'Jemelry'})">Jemelry</a>
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'Belts'})">Belts</a>
-            <a class="dropdown-item"
-               ui-sref="root.categories.singleCategoryView({categoryId: 'Eyewerman'})">Eyewerman</a>
-        </div>
-    </div>
+<nav class="nav flex-column" ng-repeat="category in categories">
+    <a class="nav-link active" >{{category.name}}</a>
 </nav>
+<!--<nav class="nav flex-column">-->
+    <!--<a class="nav-link disabled" ui-sref="root.info.welcome" ui-sref-active="active">Dashboard</a>-->
+    <!--<a class="nav-link disabled" ui-sref="root.info.about" ui-sref-active="active">User interface</a>-->
+    <!--<a class="nav-link disabled" ui-sref="root.info.services" ui-sref-active="active">Charts</a>-->
+    <!--<a class="nav-link disabled" ui-sref="root.info.references" ui-sref-active="active">Customer Pages</a>-->
+    <!--<a class="nav-link disabled" ui-sref="root.info.contact" ui-sref-active="active">Contact</a>-->
+    <!--<div class="nav-item dropdown">-->
+        <!--<a class="nav-link dropdown-toggle" ui-sref="root.info.categories" id="navbarDropdownMenuLink"-->
+           <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+            <!--Categories-->
+        <!--</a>-->
+        <!--<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
+            <!--<a class="dropdown-item"-->
+               <!--ui-sref="root.categories.singleCategoryView({categoryId: 'bagsView'})">Bags</a>-->
+            <!--<a class="dropdown-item"-->
+               <!--ui-sref="root.categories.singleCategoryView({categoryId: 'Scarves'})">Scarves, foulards and hats</a>-->
+            <!--<a class="dropdown-item"-->
+               <!--ui-sref="root.categories.singleCategoryView({categoryId: 'accessories'})">Small accessories</a>-->
+            <!--<a class="dropdown-item"-->
+               <!--ui-sref="root.categories.singleCategoryView({categoryId: 'Jemelry'})">Jemelry</a>-->
+            <!--<a class="dropdown-item"-->
+               <!--ui-sref="root.categories.singleCategoryView({categoryId: 'Belts'})">Belts</a>-->
+            <!--<a class="dropdown-item"-->
+               <!--ui-sref="root.categories.singleCategoryView({categoryId: 'Eyewerman'})">Eyewerman</a>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="nav-item dropdown">-->
+        <!--<a class="nav-link dropdown-toggle" ui-sref="root.info.productView" id="navbarDropdownMenuLink"-->
+           <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+            <!--Product-->
+        <!--</a>-->
+        <!--<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
+            <!--<a class="dropdown-item"-->
+               <!--ui-sref="root.categories.singleCategoryView({categoryId: 'bagsView'})">Bags</a>-->
+            <!--<a class="dropdown-item"-->
+               <!--ui-sref="root.categories.singleCategoryView({categoryId: 'Scarves'})">Scarves, foulards and hats</a>-->
+            <!--<a class="dropdown-item"-->
+               <!--ui-sref="root.categories.singleCategoryView({categoryId: 'accessories'})">Small accessories</a>-->
+            <!--<a class="dropdown-item"-->
+               <!--ui-sref="root.categories.singleCategoryView({categoryId: 'Jemelry'})">Jemelry</a>-->
+            <!--<a class="dropdown-item"-->
+               <!--ui-sref="root.categories.singleCategoryView({categoryId: 'Belts'})">Belts</a>-->
+            <!--<a class="dropdown-item"-->
+               <!--ui-sref="root.categories.singleCategoryView({categoryId: 'Eyewerman'})">Eyewerman</a>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</nav>-->

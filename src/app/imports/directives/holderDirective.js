@@ -15,13 +15,14 @@ angular.module(dirModuleName, [])
         };
     }])
     .directive('myBackgroundImage', function () {
-        return function (scope, element, attrs) {
+        return function (scope, element, attrs, $location) {
             element.css({
                 'background-image': 'url(' + attrs.myBackgroundImage + ')',
                 'background-size': 'cover',
                 'background-repeat': 'no-repeat',
                 'background-position': 'center center'
             });
+        console.log($location);
         };
     });
 

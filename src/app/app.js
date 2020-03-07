@@ -18,6 +18,7 @@ import APIService from "./imports/service/APIService";
 import APIDataAccessLayer from "./imports/service/backend/APIDataAccessLayer"
 import ContactCtrl from "./imports/controller/ContactController";
 import InfoCtrl from "./imports/controller/InfoController";
+import SidebarCtrl from "./imports/controller/SidebarController";
 
 import AboutCtrl from "./imports/controller/AboutController";
 import CategoriesCtrl from "./imports/controller/CategoriesController";
@@ -87,6 +88,8 @@ angular.module(MODULE_NAME, [
     .controller('ProductViewCtrl', ProductViewCtrl)
     .controller('ProductInCategoryCtrl', ProductInCategoryCtrl)
     .controller('SingleCategoryViewCtrl', SingleCategoryViewCtrl)
+    .controller('SingleCategoryViewCtrl', SingleCategoryViewCtrl)
+    .controller('SidebarCtrl', SidebarCtrl)
     .config(configureInitialRouting)
     .service('apiService', APIService)
     .service('backend', APIDataAccessLayer)

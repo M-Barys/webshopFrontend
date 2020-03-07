@@ -1,17 +1,15 @@
 class InfoCtrl {
-    constructor(apiService, $http, $scope) {
+    constructor(apiService, $http, $scope, $location) {
 
         this.apiService = apiService;
+        this.$location = $location;
         this.scope = $scope;
-        // this.loadBackground(this.scope);
+        // debugger;
+        // apiService.getUserProductView();
 
     }
 
-    loadBackground(scope){
-        scope.image = [{
-            src: 'src/public/img/infoPic.jpg',
-        }];
-    }
+    test (){this.apiService.getUserProductView();}
 }
 
 export default InfoCtrl;
